@@ -22,7 +22,6 @@
         // Unicode y Hex
         $unicode = "Avión: \u{2708} (símbolo avión)";
         $hex     = "Códigos hexadecimales: \x41\x42\x43 = ABC";
-
         // Heredoc (interpreta escapes)
         $heredoc = <<<TEXT
 Cadena con heredoc:

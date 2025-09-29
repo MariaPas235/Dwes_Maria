@@ -8,7 +8,7 @@
     <h1>Actividad con printf</h1>
 
     <?php
-        $aerolinea      = "AirGlobal";
+        $aerolinea      = "AirGlobal";;
         $numVuelo       = 1205;
         $precioBase     = 245.5;
         $tasaCombustible= 12.3456;
@@ -19,7 +19,6 @@
 
         // Imprime el nombre de la aerolínea en 10 espacios, alineado a la izquierda
     printf("Aerolínea: [%-10s]<br>", $aerolinea);
-
         // Número de vuelo como entero
     printf("Vuelo Nº: %d<br>", $numVuelo);
 

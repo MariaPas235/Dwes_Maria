@@ -70,8 +70,9 @@
 
     <h2>10. Uso de echo con comillas dobles y simples</h2>
     <?php
-    echo "Este es un 'ejemplo' con comillas dobles y simples.";
-    ?>
+    echo "Este es un 'ejemplo' con comillas dobles y simples.";  
+    ?>       
+
 
 </body>
 </html>  
