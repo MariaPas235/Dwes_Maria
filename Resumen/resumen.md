@@ -17,7 +17,7 @@ $nombre = "Ana";
   * %d: numero entero
   * %f: numero decimal (para especificar decimales: %.2f)
 
-## Variables contantes
+## Variables constantes
 
 Se definen con define("NOMBRE, valor") o const NOMBRE = valor;
 
@@ -68,6 +68,10 @@ Son arrays accesibles en cualquier parte del script:
 `__LINE__` → línea actual
 
 `__DIR__` → directorio actual
+
+
+
+# Entrega 2           
 
 ## If, else, else if
 
@@ -170,10 +174,9 @@ Sirven para incluir archivos externos:
 * Include: genera una adventencia si el archivo no existe, pero el script sigue
 * Require: genera un error fatal y detiene el script si no encuentra el archivo
 
-
 ## Arrays
 
-Un array es una estructura que almacena múltiples valores en una sola variable 
+Un array es una estructura que almacena múltiples valores en una sola variable
 
 * Array numérico: sus índices son números y empiezan en 0 por defecto
 
@@ -211,7 +214,6 @@ Un array es una estructura que almacena múltiples valores en una sola variable
   }
   ```
 
-
 ## Funciones array
 
 | Función      | Descripción                                    | Ejemplo                |
@@ -222,7 +224,6 @@ Un array es una estructura que almacena múltiples valores en una sola variable
 | end($array)   | Mueve el puntero al último elemento            | `end(dolarfrutas)`   |
 
 Estas funciones son útiles para recorres arrays manualmente, sin foreach
-
 
 ## Formularios
 
@@ -236,7 +237,6 @@ Los formularios en HTML se definen con la etiqueta `<form> ` y se comunican con 
 
 * Action: indica a que archivo se enviarán los datos, puede ser otro archivo (`action="procesar.php"`), o el mismo archivo (`action="<?php echo $_SERVER['PHP_SELF']; ?>"`) donde se procesa el formulario en la misma página
 * Method: define cómo se envían los datos: GET(los datos viajan en la URL visiblemente), POST (los datos van ocultos por lo que es más seguro para contraseñas o información visible)
-
 
 ## Variable superglobales
 
@@ -256,19 +256,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ```
 
-
 ## Tipos de campos de formulario
 
 Ya que al añadir los ejejmplos de input, el readme me los coje como si fuesen lineas de código Ejemplo:
 
-<input type="text" name="nombre">
+`<input type="text" name="nombre">`
 
 ![1760099745509](image/resumen/1760099745509.png)
 
 Por lo que me veo en la obligación de aydarme del chatGPT
 
 ![1760099758793](image/resumen/1760099758793.png)
-
 
 ## Comprobaciones básicas PHP
 
