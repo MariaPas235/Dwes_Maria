@@ -24,9 +24,6 @@ $arrayprofesor = [$profesor1, $profesor2];
 
 $controller = new AlumnoController();
 $alumnologgueado = $controller->handleForm();
-
-
-
 ?>
 
 
