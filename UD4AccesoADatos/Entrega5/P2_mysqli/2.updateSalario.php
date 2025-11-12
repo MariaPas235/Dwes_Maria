@@ -4,8 +4,8 @@ $cn = mysqli_connect("localhost","root","","dwes");
 mysqli_set_charset($cn, "utf8mb4");
 
 
-$id = 7;                 // empleado objetivo
-$nuevo = 2000.00;
+$id = 6;                 // empleado objetivo
+$nuevo = 5000.00;
 
 
 try {

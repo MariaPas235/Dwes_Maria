@@ -7,7 +7,7 @@ $cn = db();
 
 
 //selecciona el id para encontrar y actualizar
-$id = 2;
+$id = 6;
 
 
 try {

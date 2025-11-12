@@ -7,7 +7,7 @@ $cn = db();
 
 
 // Empleado a borrar
-$id = 1 ;
+$id = 2 ;
 
 
 try {
