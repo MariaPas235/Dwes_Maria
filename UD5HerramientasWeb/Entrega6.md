@@ -1,0 +1,88 @@
+p2 ejemplo 1
+
+![1763037636774](image/Entrega6/1763037636774.png)
+
+p2 ejemplo 2
+
+![1763037664084](image/Entrega6/1763037664084.png)
+
+p2 ejemplo3
+
+![1763038337261](image/Entrega6/1763038337261.png)
+
+![1763038195817](image/Entrega6/1763038195817.png)
+
+![1763038391530](image/Entrega6/1763038391530.png)
+
+![1763038407239](image/Entrega6/1763038407239.png)
+
+Ejemplo 4
+
+![1763038592578](image/Entrega6/1763038592578.png)
+
+![1763038789935](image/Entrega6/1763038789935.png)
+
+programa 3
+
+![1763039723767](image/Entrega6/1763039723767.png)
+
+![1763039742905](image/Entrega6/1763039742905.png)
+
+programa4
+
+![1763039970595](image/Entrega6/1763039970595.png)![1763040008248](image/Entrega6/1763040008248.png)
+
+![1763040068374](image/Entrega6/1763040068374.png)
+
+![1763040085921](image/Entrega6/1763040085921.png)
+
+Punto 2 Estado Sesiones 
+
+![1763122482798](image/Entrega6/1763122482798.png)
+
+p5_ sesiones ejemplo 1
+
+![1763123040397](image/Entrega6/1763123040397.png)
+
+![1763123055050](image/Entrega6/1763123055050.png)
+
+P5_ sesiones programa 5 
+
+![1763123549404](image/Entrega6/1763123549404.png)
+
+![1763123578659](image/Entrega6/1763123578659.png)
+
+P6_cookie
+
+ejemplo1 
+
+![1763123997739](image/Entrega6/1763123997739.png)
+
+![1763124032236](image/Entrega6/1763124032236.png)
+
+ampliado 
+
+![1763124240561](image/Entrega6/1763124240561.png)
+
+![1763124253501](image/Entrega6/1763124253501.png)
+
+
+ejemplo3 
+
+![1763124356018](image/Entrega6/1763124356018.png)
+
+![1763124370793](image/Entrega6/1763124370793.png)
+
+ejemplo4 
+
+![1763124464984](image/Entrega6/1763124464984.png)
+
+![1763124529063](image/Entrega6/1763124529063.png)
+
+ejemplo6
+
+![1763124687766](image/Entrega6/1763124687766.png)
+
+![1763124711834](image/Entrega6/1763124711834.png)
+
+![1763124881308](image/Entrega6/1763124881308.png)
