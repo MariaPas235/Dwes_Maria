@@ -6,7 +6,7 @@ require_once __DIR__ . '/models/Admin.php';
 require_once __DIR__ . '/controllers/AuthAdminController.php';
 require_once __DIR__ . '/controllers/ProductController.php';
 require_once __DIR__ . '/controllers/BikesController.php';
-
+require_once __DIR__ . '/controllers/AccesoriesController.php';
 //si no se ha creado la base de datos, la creamos
 if (!file_exists(__DIR__ . '/data/app.sqlite')) {
     require_once __DIR__ . '/create_db.php';
@@ -92,6 +92,33 @@ switch ($controllerName) {
             default:
                 http_response_code(404);
                 echo 'Acción de bicicletas no encontrada';
+        }
+        break;
+
+     case 'accessories':
+        $accessoriesController = new AccesoriesController($pdo);
+        switch ($action) {
+            case 'index':
+                $accessoriesController->index();
+                break;
+            case 'create':
+                $accessoriesController->create();
+                break;
+            case 'store':
+                $accessoriesController->store();
+                break;
+            case 'edit':
+                $accessoriesController->edit();
+                break;
+            case 'update':
+                $accessoriesController->update();
+                break;
+            case 'delete':
+                $accessoriesController->delete();
+                break;
+            default:
+                http_response_code(404);
+                echo 'Acción de accesorios no encontrado';
         }
         break;
 

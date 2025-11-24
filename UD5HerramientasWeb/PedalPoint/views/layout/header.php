@@ -25,11 +25,12 @@ $admin = $_SESSION['admin'] ?? null;
             <header>
                 <span class="nav-user">Hola, <?= htmlspecialchars($admin['username']) ?></span>
                 <a href="index.php?c=bikes&a=index">Bicicletas</a>
-                <a href="index.php?c=auth&a=logout">Cerrar sesión</a>
+                <a href="index.php?c=accessories&a=index">Accesorios</a>
+                <a href="index.php?c=authadmin&a=logout">Cerrar sesión</a>
             </header>
             
         <?php else: ?>
-            <a href="index.php?c=authAdmin&a=login">Login</a>
+            <a href="index.php?c=authadmin&a=login">Login</a>
         <?php endif; ?>
     </div>
 </nav>

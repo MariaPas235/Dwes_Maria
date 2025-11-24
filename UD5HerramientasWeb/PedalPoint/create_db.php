@@ -11,6 +11,15 @@ if (!is_dir($dataDir)) {
 
 $pdo = getPdo();
 
+//Crearción tabla admin
+$pdo->exec("
+    CREATE TABLE IF NOT EXISTS admins (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL UNIQUE,
+    password_hash TEXT NOT NULL
+    )
+");
+
 //Crearción tabla usuarios 
 $pdo->exec("
     CREATE TABLE IF NOT EXISTS users (
@@ -19,6 +28,7 @@ $pdo->exec("
     password_hash TEXT NOT NULL
     )
 ");
+
 
 // Crear tabla de bicicletas 
 $pdo->exec("
@@ -32,6 +42,16 @@ $pdo->exec("
     )
 ");
 
+// Crear tabla de accesorios
+$pdo->exec("
+    CREATE TABLE IF NOT EXISTS accessories (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nombre TEXT NOT NULL,
+        descripcion TEXT NOT NULL,
+        stock REAL NOT NULL,
+        price REAL NOT NULL
+    )
+");
 
 
 //Creación de admin por defecto si no existe 

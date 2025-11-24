@@ -60,7 +60,7 @@
 
     <label>
         Precio (€)
-        <input type="number" step="0.01" min="0" name="price" value="<?= htmlspecialchars((string) $product['price']) ?>"
+        <input type="number" step="0.01" min="0" name="price" value="<?= htmlspecialchars((string) $bikes['price']) ?>"
             required>
     </label>
 
@@ -68,7 +68,7 @@
         <?= $action === 'store' ? 'Crear' : 'Actualizar' ?>
     </button>
 
-    <a href="index.php?c=product&a=index" class="button button-secondary">Volver</a>
+    <a href="index.php?c=bikes&a=index" class="button button-secondary">Volver</a>
 </form>
 
 <?php require __DIR__ . '/../layout/footer.php'; ?>

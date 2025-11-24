@@ -16,7 +16,7 @@ class AuthAdminController{
     public function login(): void
     {
         $error = $_GET['error'] ?? null;
-        require __DIR__ . '/../views/authAdmin/login.php';
+        require __DIR__ . '/../views/authadmin/login.php';
     }
 
     /**
@@ -31,7 +31,7 @@ class AuthAdminController{
 
         if ($username === '' || $password === '') {
             $error = 'Debes rellenar usuario y contraseña.';
-            require __DIR__ . '/../views/authAdmin/login.php';
+            require __DIR__ . '/../views/authadmin/login.php';
             return;
         }
 
@@ -39,7 +39,7 @@ class AuthAdminController{
 
         if (!$admin || !password_verify($password, $admin->getPasswordHash())) {
             $error = 'Usuario o contraseña incorrectos.';
-            require __DIR__ . '/../views/authAdmin/login.php';
+            require __DIR__ . '/../views/authadmin/login.php';
             return;
         }
 
@@ -51,6 +51,9 @@ class AuthAdminController{
         header('Location: index.php?c=product&a=index');
         exit;
     }
+
+
+    
 
     /**
      * Cierra la sesión.
@@ -72,7 +75,7 @@ class AuthAdminController{
             );
         }
         session_destroy();
-        header('Location: index.php?c=authAdmin&a=login');
+        header('Location: index.php?c=authadmin&a=login');
         exit;
     }
 }
