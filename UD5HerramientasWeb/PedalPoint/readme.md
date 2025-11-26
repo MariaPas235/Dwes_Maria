@@ -74,9 +74,9 @@ Y actualicé el index.php con el case producto que es la vista de bienvenida, a 
 
 ## Dia 3: 21/11/2025
 
-Para el dia de hoy el objetivo es crear el crud de accesorios para bicicletas, básicamente tenemos que hacer lo mismo que en bicicletas 
+Para el dia de hoy el objetivo es crear el crud de accesorios para bicicletas, básicamente tenemos que hacer lo mismo que en bicicletas
 
-Para ellos crearemos el controlador de accesorios, el modelo de accesorio, y las pantallas de accesorios 
+Para ellos crearemos el controlador de accesorios, el modelo de accesorio, y las pantallas de accesorios
 
 AccessoriesController
 
@@ -90,11 +90,11 @@ Modelo Accessories
 
 ![1763990986686](image/readme/1763990986686.png)
 
-Accessories form 
+Accessories form
 
 ![1763991019386](image/readme/1763991019386.png)
 
-Accessories form 
+Accessories form
 
 ![1763991049426](image/readme/1763991049426.png)
 
@@ -102,19 +102,19 @@ Accessories form
 
 ## Dia 4: 24/11/2025
 
-Para el dia de hoy mi objetivo es poder cerrar sesión y que un usuario que no sea administrador pueda registrarse e iniciar sesión. Para ellos asocie el controlador y el class al boton de cerrar sesión 
+Para el dia de hoy mi objetivo es poder cerrar sesión y que un usuario que no sea administrador pueda registrarse e iniciar sesión. Para ellos asocie el controlador y el class al boton de cerrar sesión
 
 ![1763991203558](image/readme/1763991203558.png)
 
-Simplemente con eso ya funcionaría ya que los métodos ya estaban programados anteriormente 
+Simplemente con eso ya funcionaría ya que los métodos ya estaban programados anteriormente
 
-Para el registro de usuarios, creamos el modelo, controler y vistas 
+Para el registro de usuarios, creamos el modelo, controler y vistas
 
 AuthUserController
 
 ![1763991342236](image/readme/1763991342236.png)
 
-Modelo User 
+Modelo User
 
 ![1763991376793](image/readme/1763991376793.png)
 
@@ -125,3 +125,51 @@ login.php
 register.php
 
 ![1763991425966](image/readme/1763991425966.png)
+
+## Dia 5: 26/11/2025
+
+El objetivo de hoy era dar por finalizado el proyecto y lo hemos conseguido, hemos adaptado las vistas para que un usuaurio normal no pueda realizar funciones de administrados como añadir, actualizar y eliminar objetos, hemos creado otra ventana que aparezca ña primera para que el usuario elija como iniciar sesión. Además hemos añadido cookies que hacen un recuento de cuantas veces se visita la página, tambien podemos hacer recuento del stock de accesorios que tenemos en la base de datos y por último podemos exportar nuestras tablas con la inofmración de las bicicletas y accesorio a pdf
+
+![1764152043277](image/readme/1764152043277.png)
+
+Esta sería nuestra pantalla principal donde podemos elegir entre registrar a un usuario normal o iniciar sesion como usuario o administrador
+
+Vamos a ver las funciones del administradror
+
+![1764152122807](image/readme/1764152122807.png)
+
+Aqui tenemos el formulario de inicio de sesión y vamos a entrar con el usuario por defecto adminMaria
+
+![1764152169674](image/readme/1764152169674.png)
+
+Tenemos ahora una pantalla principal y vamos a ir navegando por los diferentes elementos del header 
+
+![1764152211823](image/readme/1764152211823.png)
+
+Si clicamos en bicicletas nos aparece una tabla con todas las bicicletas de la base de datos 
+
+![1764152246929](image/readme/1764152246929.png)
+
+Podemos añadir una nueva bicicleta 
+
+![1764152271579](image/readme/1764152271579.png)
+
+Modificar una bicicleta de la tabla o eliminarla. Si pulsamos el boton de exportar como pdf se nos descarga un archivo que se veria de la siguiente manera:
+
+![1764152340893](image/readme/1764152340893.png)
+
+Todo esto es el crud de bicicletas, para el crud de accesorios es exactamente lo mismo 
+
+Si le damos a cerrar sesión, vamos a destruir la sesión del admin para poder iniciar sesión con un usuatrio normal 
+
+En este caso podemos registrar a un usuario en este caso juan con contraseña j, e iniciaremos sesión con sus credenciales, una vez dentro vamos a buscar las bicicletas y esto sería lo que vemos
+
+![1764152465089](image/readme/1764152465089.png)
+
+Una pantalla como la del administrador donde nos muestra una lista con todas las bicicletas pero en este caso, no se pueden ni añadir ni modificar y eliminar.
+
+![1764152534924](image/readme/1764152534924.png)
+
+A diferencia de las bicicletas, los accesorios tienen una sección más donde se hace el recuento del stock total que hay de accesorios. Esto vendría bien para ver cuanto espacio de sobra tenemos en el almacén. 
+
+Con esto doy por finalizado mi proyecto de la unidad 5 de la asignatura entorno servidor

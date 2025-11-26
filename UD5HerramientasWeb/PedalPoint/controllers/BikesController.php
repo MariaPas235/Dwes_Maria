@@ -14,8 +14,9 @@ class BikesController
     private function requireLogin(): void
     {
         ensureSession();
-        if (!isset($_SESSION['admin'])) {
-            header('Location: index.php?c=authadmin&a=login');
+        // CORRECCIÓN CLAVE: Permite la entrada si hay sesión de administrador O usuario.
+        if (!isset($_SESSION['admin']) && !isset($_SESSION['user'])) { 
+            header('Location: index.php?c=authuser&a=login');
             exit;
         }
     }
@@ -45,7 +46,7 @@ class BikesController
         $color = trim($_POST['color'] ?? '');
         $priceStr = trim($_POST['price'] ?? '');
 
-        if ($marca === '' ||$modelo === '' ||$tipo === '' ||$color === '' || $priceStr === '') {
+        if ($marca === '' || $modelo === '' || $tipo === '' || $color === '' || $priceStr === '') {
             $error = 'Todos los campos son obligatorios.';
             $bikes = ['id' => null, 'marca' => $marca, 'modelo' => $modelo,'tipo' => $tipo,'color' => $color, 'price' => $priceStr];
             $action = 'store';
@@ -89,7 +90,7 @@ class BikesController
         $color = trim($_POST['color'] ?? '');
         $priceStr = trim($_POST['price'] ?? '');
 
-        if ($marca === '' ||$modelo === '' ||$tipo === '' ||$color === '' || $priceStr === '') {
+        if ($marca === '' || $modelo === '' || $tipo === '' || $color === '' || $priceStr === '') {
             $error = 'Todos los campos son obligatorios.';
             $bikes = ['id' => null, 'marca' => $marca, 'modelo' => $modelo,'tipo' => $tipo,'color' => $color, 'price' => $priceStr];
             $action = 'update';
@@ -105,9 +106,70 @@ class BikesController
         exit;
     }
 
+   public function exportPdf()
+{
+    // Cargar FPDF
+    require_once __DIR__ . '/../fpdf186/fpdf.php';
+
+    // Cargar modelo y conexión
+    require_once __DIR__ . '/../models/Bikes.php';
+    require_once __DIR__ . '/../config.php';
+
+    // Obtener conexión SQLite
+    $pdo = getPdo();
+
+    // Obtener las bicicletas
+    $bikes = Bikes::all($pdo);
+
+    // Crear PDF
+    $pdf = new FPDF();
+    $pdf->AddPage();
+
+    // Título
+    $pdf->SetFont('Arial', 'B', 16);
+    $pdf->Cell(0, 10, utf8_decode('Listado de Bicicletas'), 0, 1, 'C');
+    $pdf->Ln(5);
+
+    // Encabezados de tabla
+    $pdf->SetFont('Arial', 'B', 12);
+    $pdf->Cell(20, 10, 'ID', 1);
+    $pdf->Cell(40, 10, 'Marca', 1);
+    $pdf->Cell(40, 10, 'Modelo', 1);
+    $pdf->Cell(30, 10, 'Tipo', 1);
+    $pdf->Cell(30, 10, 'Color', 1);
+    $pdf->Cell(30, 10, 'Precio', 1);
+    $pdf->Ln();
+
+    // Contenido
+    $pdf->SetFont('Arial', '', 12);
+
+    foreach ($bikes as $b) {
+        $pdf->Cell(20, 10, $b['id'], 1);
+        $pdf->Cell(40, 10, utf8_decode($b['marca']), 1);
+        $pdf->Cell(40, 10, utf8_decode($b['modelo']), 1);
+        $pdf->Cell(30, 10, utf8_decode($b['tipo']), 1);
+        $pdf->Cell(30, 10, utf8_decode($b['color']), 1);
+        $pdf->Cell(30, 10, number_format((float)$b['price'], 2, ',', '.') . '€', 1);
+        $pdf->Ln();
+    }
+
+    // Forzar descarga del PDF
+    $pdf->Output('D', 'bicicletas.pdf');
+}
+
+
+
     public function delete(): void
     {
-        $this->requireLogin();
+        // Los métodos de CRUD (create, store, edit, update, delete) 
+        // solo deben ser accesibles para el administrador. 
+        // El chequeo aquí sigue siendo solo 'admin' para estas acciones.
+        ensureSession();
+        if (!isset($_SESSION['admin'])) {
+            // Si el usuario no es admin, redirigir a la vista pública (index)
+            header('Location: index.php?c=bikes&a=index'); 
+            exit;
+        }
 
         $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
         if ($id > 0) {

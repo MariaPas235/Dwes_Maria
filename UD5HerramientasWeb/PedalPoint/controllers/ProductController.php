@@ -13,8 +13,8 @@ class ProductController
     private function requireLogin(): void
     {
         ensureSession();
-        if (!isset($_SESSION['admin'])) {
-            header('Location: index.php?c=authadmin&a=login');
+        if (!isset($_SESSION['admin']) && !isset($_SESSION['user'])) {
+            header('Location: index.php?c=authuser&a=login');
             exit;
         }
     }

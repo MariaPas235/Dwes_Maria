@@ -1,6 +1,6 @@
 <?php require __DIR__ . '/../layout/header.php'; ?>
 
-<h1>Bienvenido a PedalPoint. Registrese</h1>
+<h1>Bienvenido a PedalPoint. Registrese usuario</h1>
 
 <?php if (!empty($error)): ?>
     <div class="alert alert-error">

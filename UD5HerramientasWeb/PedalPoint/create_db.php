@@ -56,13 +56,13 @@ $pdo->exec("
 
 //Creación de admin por defecto si no existe 
 
-$stmt = $pdo->prepare('SELECT COUNT(*) FROM users WHERE username = :u');
+$stmt = $pdo->prepare('SELECT COUNT(*) FROM admins WHERE username = :u');
 $stmt->execute([':u' => 'adminMaria']);
 $exists = (int)$stmt->fetchColumn();
 
 if ($exists === 0) {
     $passwordHash = password_hash('adminMaria', PASSWORD_DEFAULT);
-    $insert = $pdo->prepare('INSERT INTO users (username, password_hash) VALUES (:u, :p)');
+    $insert = $pdo->prepare('INSERT INTO admins (username, password_hash) VALUES (:u, :p)');
     $insert->execute([
         ':u' => 'adminMaria',
         ':p' => $passwordHash,
