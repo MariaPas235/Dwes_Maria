@@ -102,4 +102,6 @@ Pasamos ahora a crear las seeders que son como los datos a fuego que va a llevar
 
 ![1769690461967](image/README/1769690461967.png)
 
-## Enlace video explicativo
+## Enlace video explicativo 
+
+https://drive.google.com/file/d/1HEN01BMRmBejICVk1XR4UZ7qIIAZG4Ec/view?usp=sharing
