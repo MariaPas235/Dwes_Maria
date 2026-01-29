@@ -15,7 +15,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        User::factory(10)->create();
+        // aqui le vamos a añadir los diferentes Sesion que creemos 
+        //User::Userseeder::class; //Ejemplo de llamada a otro seeder
 
         User::factory()->create([
             'name' => 'Test User',
