@@ -1,0 +1,8 @@
+POST http://127.0.0.1:8000/api/city HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Granada",
+  "population": 328000,
+  "postalcode": "18001"
+}
